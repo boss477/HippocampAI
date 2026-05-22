@@ -18,7 +18,7 @@ We built and extended this platform for the **SanDisk Hackathon in Vellore**, de
 
 > **Research foundation:** Our hackathon solution was shaped by [*The AI Hippocampus: How Far are We From Human Memory?*](https://arxiv.org/abs/2601.09113) (Jia et al., 2026) — a survey on implicit, explicit, and **agentic memory** paradigms in LLMs and multimodal systems.
 
-This repo is our customized implementation and demo codebase, built on top of the open-source [HippocampAI](https://pypi.org/project/hippocampai/) memory engine.
+This repo is our customized implementation and demo codebase — the [HippocampAI](https://github.com/boss477/HippocampAI) agentic memory engine we built for the SanDisk Hackathon.
 
 ---
 
