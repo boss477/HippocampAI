@@ -198,21 +198,6 @@ USB (BrainVault) ──decrypt──▶  JSON memories  ──restore──▶  
 | **Gzip compression** | Optional compressed archives |
 | **Embedding migration** | Safe vector model upgrades via Celery background jobs |
 
-### Production & SaaS Platform
-
-| Feature | Description |
-|---------|-------------|
-| **FastAPI REST API** | 102+ endpoints with OpenAPI docs |
-| **WebSocket support** | Real-time memory events and trigger notifications |
-| **Multi-tenant auth** | PostgreSQL-backed user/session authentication |
-| **Rate limiting** | Per-user API throttling |
-| **Celery workers** | Async dedup, consolidation, expiration, migration tasks |
-| **Celery Beat scheduler** | Cron-style scheduled memory maintenance |
-| **Flower monitoring** | Celery task queue dashboard |
-| **Prometheus metrics** | Request latency, cache hit rate, memory ops/sec |
-| **Grafana dashboards** | Pre-built observability panels |
-| **Structured logging** | JSON logs with correlation IDs |
-
 ### LLM & Framework Integrations
 
 | Provider / Framework | Support |
@@ -247,15 +232,7 @@ Full-featured web UI with 20+ pages:
 | **Triggers** | Configure event-driven memory actions |
 | **Procedural Memory** | View and edit learned behavioral rules |
 | **Feedback** | Recall relevance ratings and score trends |
-| **Collaboration** | Multi-agent shared memory management |
-| **Context Assembly** | Preview token-budgeted LLM context packs |
-| **Schema** | Custom entity type definitions |
-| **Embedding Migration** | Monitor vector model upgrade progress |
-| **Agentic Classifier** | LLM memory classification demo |
-| **Observability** | Prometheus metrics and system telemetry |
-| **Policies** | Retention and access policy configuration |
-| **Replay** | Re-run past recall queries for debugging |
-
+|
 ---
 
 ## Architecture
