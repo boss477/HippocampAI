@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HippocampAI BrainVault, memory on a USB drive</title>
+<meta name="description" content="BrainVault and an agentic chat pipeline built on Rex Divakar&#39;s HippocampAI memory engine: encrypted memory that lives on a USB drive. First runner-up at the SanDisk Hackathon, Vellore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="mast">
+  <div class="container">
+    <a class="wordmark" href="#main">HippocampAI</a>
+    <nav aria-label="Page">
+      <ul>
+        <li><a href="#contents">What it does</a></li>
+        <li><a href="#vault">The vault</a></li>
+        <li><a href="#start">Install</a></li>
+        <li><a href="https://github.com/boss477/HippocampAI">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="main">
+  <div class="container">
+    <h1>Memory that travels on a USB drive</h1>
+    <div class="hero__foot cols">
+      <p class="lead">BrainVault adds an encrypted, portable vault to the HippocampAI memory engine.</p>
+      <div class="actions">
+        <a class="btn" href="https://github.com/boss477/HippocampAI">Read the code</a>
+        <a class="btn btn--line" href="#start">Install with pip</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="contents" id="contents">
+  <div class="container">
+    <h2 class="heavy">What the team added, and what it builds on</h2>
+    <ul class="rows">
+      <li class="cols"><h3>BrainVault</h3><p>Writes every memory to a USB drive as encrypted files, and restores them.</p><small>export_to_usb.py</small></li>
+      <li class="cols"><h3>Agentic chat</h3><p>Redis holds the last 20 turns. The agent decides which statements to keep.</p><small>brain_flow</small></li>
+      <li class="cols"><h3>Recall</h3><p>Hybrid search across vectors and BM25, reranked by a cross-encoder.</p><small>the HippocampAI engine</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <h2>Runner-up at the SanDisk Hackathon</h2>
+    <dl class="stats">
+      <div><dt>teams entered, across four VIT campuses</dt><dd>1,000+</dd></div>
+      <div><dt>shortlist the team reached</dt><dd>Top 50</dd></div>
+      <div><dt>final placing, as first runner-up</dt><dd>2nd</dd></div>
+      <div><dt>prize, in rupees</dt><dd>50,000</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="container">
+    <blockquote class="heavy">
+      <p>Built from one survey of implicit, explicit and agentic memory in language models.</p>
+      <footer><a class="link" href="https://arxiv.org/abs/2601.09113">The AI Hippocampus: How Far are We From Human Memory?</a> Jia et al., 2026.</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="trip" id="vault">
+  <div class="container cols">
+    <h2>Out to the drive, and back</h2>
+    <section aria-labelledby="t-out">
+      <h3 id="t-out">Export</h3>
+      <ol>
+        <li>The API hands over every memory.</li>
+        <li>Fernet encrypts them from your password.</li>
+        <li>Timestamped files land on the drive.</li>
+      </ol>
+    </section>
+    <section aria-labelledby="t-in">
+      <h3 id="t-in">Restore</h3>
+      <ol>
+        <li>The latest export is found.</li>
+        <li>It is decrypted to JSON.</li>
+        <li>Any running instance ingests it.</li>
+      </ol>
+    </section>
+  </div>
+</section>
+
+<section class="start" id="start">
+  <div class="container cols">
+    <div class="start__text">
+      <h2 class="heavy">Store and recall in ten lines</h2>
+      <p class="lead">Install the package, then remember and recall.</p>
+      <a class="btn btn--line" href="https://github.com/boss477/HippocampAI#quick-start">Open the quick start</a>
+    </div>
+    <figure>
+      <pre tabindex="0" aria-label="Install and first memory"><code>pip install "hippocampai[saas]"
+
+from hippocampai import MemoryClient
+
+client = MemoryClient()
+client.remember(
+    "I prefer working remotely on Tuesdays",
+    user_id="alice",
+    type="preference",
+)
+results = client.recall("work preferences", user_id="alice")
+print(results[0].memory.text)</code></pre>
+      <figcaption>From the repository README.</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container cols heavy">
+    <p>BrainVault, the agentic chat pipeline and the USB tools were built for the SanDisk Hackathon in Vellore, on the open-source <a class="link" href="https://github.com/rexdivakar/HippocampAI">HippocampAI engine by Rex Divakar</a> (Apache 2.0).</p>
+    <ul>
+      <li><a class="link" href="https://github.com/boss477/HippocampAI">Repository</a></li>
+      <li><a class="link" href="https://github.com/boss477/HippocampAI/tree/main/docs">Documentation</a></li>
+      <li><a class="link" href="https://github.com/boss477/HippocampAI/blob/main/LICENSE">Licence</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
