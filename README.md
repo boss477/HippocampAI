@@ -1,14 +1,28 @@
-# HippocampAI — Agentic Memory Engine
+<h1 align="center">HippocampAI BrainVault</h1>
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/pypi/pyversions/hippocampai.svg)](https://pypi.org/project/hippocampai/)
-[![Documentation](https://img.shields.io/badge/docs-comprehensive-brightgreen.svg)](docs/)
+<p align="center"><strong>Memory that travels on a USB drive.</strong></p>
 
-**🏆 1st Runner-Up — SanDisk Hackathon, Vellore (₹50,000 prize)**
+<p align="center">
+The team's SanDisk Hackathon build: BrainVault, an encrypted memory vault on a USB drive, and an
+agentic chat pipeline, built on Rex Divakar's open-source HippocampAI memory engine.
+</p>
 
-Top 50 out of **1000+ teams** across VIT Vellore, VIT Chennai, VIT AP, and VIT Mauritius.
+<p align="center">
+  <a href="https://github.com/boss477/HippocampAI/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/boss477/HippocampAI/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="license: Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-1b5e3b"></a>
+  <img alt="python: 3.11" src="https://img.shields.io/badge/python-3.11-1b5e3b?logo=python&logoColor=white">
+  <img alt="SanDisk Hackathon: 1st runner-up" src="https://img.shields.io/badge/SanDisk%20Hackathon-1st%20runner--up-b08900">
+  <a href="https://boss477.github.io/HippocampAI/"><img alt="website: boss477.github.io" src="https://img.shields.io/badge/website-boss477.github.io-1b5e3b"></a>
+</p>
 
----
+<p align="center"><a href="https://boss477.github.io/HippocampAI/"><img src="docs/images/landing-page.webp" alt="The HippocampAI BrainVault project page" width="100%"></a></p>
+
+<sub>The project page, with the vault round trip and the hackathon result.</sub>
+
+> **Built on [HippocampAI](https://github.com/rexdivakar/HippocampAI) by Rex Divakar**, under the
+> Apache 2.0 license. The memory engine, its API and the `hippocampai` package are his work. This
+> repository adds the hackathon modules described under
+> [Our Custom Features](#our-custom-features-sandisk--brainvault).
 
 ## About This Project
 
@@ -27,7 +41,7 @@ This repo is our customized implementation and demo codebase — the [HippocampA
 | | |
 |---|---|
 | **Event** | SanDisk Hackathon — Vellore |
-| **Result** | 🥈 1st Runner-Up (₹50k) |
+| **Result** | 1st Runner-Up (₹50k) |
 | **Scale** | 1000+ teams → Top 50 → Final placement |
 | **Theme** | Agentic AI + portable memory on external storage |
 | **Approach** | Research paper → architecture design → full-stack demo under time pressure |
@@ -49,7 +63,7 @@ This repo is our customized implementation and demo codebase — the [HippocampA
 
 These are the hackathon-specific modules we built on top of HippocampAI — the core differentiators for portable, agentic memory.
 
-### 🧠 BrainVault — Encrypted USB Memory Vault
+### BrainVault — Encrypted USB Memory Vault
 
 | Feature | Description |
 |---------|-------------|
@@ -64,7 +78,7 @@ HippocampAI API  ──export──▶  Fernet encrypt  ──write──▶  US
 USB (BrainVault) ──decrypt──▶  JSON memories  ──restore──▶  HippocampAI API
 ```
 
-### 🤖 Agentic Chat Pipeline (`brain_flow`)
+### Agentic Chat Pipeline (`brain_flow`)
 
 | Feature | Description |
 |---------|-------------|
@@ -75,7 +89,7 @@ USB (BrainVault) ──decrypt──▶  JSON memories  ──restore──▶  
 | **Local LLM support** | Runs against LM Studio (`qwen3.5-9b`) for fully offline inference |
 | **Importance scoring** | Long-term facts stored with importance=7, 365-day TTL, tagged `chat` + `memory` |
 
-### 💬 Brain Chat UI (`chat_ui`)
+### Brain Chat UI (`chat_ui`)
 
 | Feature | Description |
 |---------|-------------|
@@ -84,7 +98,7 @@ USB (BrainVault) ──decrypt──▶  JSON memories  ──restore──▶  
 | **USB health dashboard** | Live drive stats + write-speed graph inside the same interface |
 | **Session persistence** | Redis-backed conversation history across turns |
 
-### 📊 USB SmartMetrics (`usb_health` / `performance`)
+### USB SmartMetrics (`usb_health` / `performance`)
 
 | Feature | Description |
 |---------|-------------|
@@ -96,7 +110,7 @@ USB (BrainVault) ──decrypt──▶  JSON memories  ──restore──▶  
 | **Live matplotlib graph** | Write speed, average, and peak plotted over time in the Gradio UI |
 | **CLI monitor mode** | Standalone terminal dashboard for debugging export performance |
 
-### 📚 Knowledge Import (`import_books_to_hippocamp`)
+### Knowledge Import (`import_books_to_hippocamp`)
 
 | Feature | Description |
 |---------|-------------|
@@ -404,6 +418,6 @@ Our hackathon solution focused on bridging **explicit** and **agentic** memory �
 
 ---
 
-**Built at the SanDisk Hackathon, Vellore 🚀**
+**Built at the SanDisk Hackathon, Vellore**
 
 *Sometimes you're just destined to win in a different place.*
